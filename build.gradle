@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'main.java.todo.Main'
+
+// tag::repositories[]
+repositories {
+  mavenCentral()
+}
+// end:repositories[]
+
+// tag:jar[]
+jar {
+  baseName = 'todo'
+  version = '1.0.0'
+}
+// end:jar[]
+
+
+// tag:dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+  // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+  compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+  
+  // https://mvnrepository.com/artifact/junit/junit
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+// end:dependencies[]
