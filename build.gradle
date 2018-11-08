@@ -18,8 +18,8 @@ jar {
 
 
 // tag:dependencies[]
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11.0
+targetCompatibility = 11.0
 
 dependencies {
   // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
