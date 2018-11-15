@@ -15,7 +15,7 @@ public class Main {
   public static void main(String[] args) throws Exception {
     // a reference to a new file
     File todoTxt = new File("./src/main/resources/todo.txt");
-    // creates a new file or overwrites an existing file with nothnig
+    // creates a new file or overwrites an existing file with nothing
     File tempTxt = new File("./src/main/resources/temp.txt");
     BufferedReader br = new BufferedReader(new FileReader(todoTxt));
     BufferedWriter bw = new BufferedWriter(new FileWriter(tempTxt));
