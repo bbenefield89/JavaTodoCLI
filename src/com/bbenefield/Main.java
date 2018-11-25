@@ -7,12 +7,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        File todoFile = new File("./src/com/bbenefield/resources/todos.txt");
-        File tempFile = new File("./src/com/bbenefield/resources/temp.txt");
-        FileReader fr = new FileReader(todoFile);
-        BufferedReader br = new BufferedReader(fr);
         Scanner cliArgumentParser = new Scanner(System.in);
         String cliArgument;
+        TaskList taskList = new TaskList();
 
         do {
             System.out.printf(
@@ -27,7 +24,7 @@ public class Main {
 
             switch (cliArgument) {
                 case "1":
-                    System.out.println("LIST ALL TASKS");
+                    taskList.getAllTasks();
                     break;
 
                 case "2":
@@ -45,8 +42,6 @@ public class Main {
                 default:
                     System.out.printf("\"%s\" is not a supported command.", cliArgument);
             }
-
-            System.out.println(cliArgument);
         }
         while (!cliArgument.equals("q"))
             ;
