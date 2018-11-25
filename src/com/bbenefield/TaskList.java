@@ -4,18 +4,18 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-public class TaskList {
-    private File todoFile = new File("./src/com/bbenefield/resources/todos.txt");
-    private File tempFile = new File("./src/com/bbenefield/resources/temp.txt");
-    private FileReader fr;
+class TaskList {
+    private File tempFile;
     private BufferedReader br;
 
-    public TaskList() throws Exception {
-        this.fr = new FileReader(todoFile);
-        this.br = new BufferedReader(fr);
+    TaskList() throws Exception {
+        File todoFile = new File("./src/com/bbenefield/resources/todos.txt");
+        FileReader fr = new FileReader(todoFile);
+        tempFile = new File("./src/com/bbenefield/resources/temp.txt");
+        br = new BufferedReader(fr);
     }
 
-    public void getAllTasks() throws Exception {
+    void getAllTasks() throws Exception {
         printAllTasksFromFile();
     }
 
